@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #58687E;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html {
+    font-size: calc(0.75vh+0.75vw);
+}
+.redColor {
+    color: #FF5E5E;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* Brand logo */
+
+.brand {
+    width: fit-content;
+    height: fit-content;
+    margin-top: 21.61px;
+    margin-left: 30px;
+}
+
+.maincontainer{
+	max-height:400px;
+	
+}
+
+
+/* Highradius Logo */
+
+.logo {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 21.61px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Heading */
+
+.heading {
+    width: fit-content;
+    margin: 30px;
+    text-align: left;
+    font: normal normal normal 28px/32px 'Ubuntu';
+    color: #FFFFFF;
+}
+
+/* Content  */
+
+.content {
+    background: #273D49CC 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    margin: 0 30px;
+    margin-bottom: 30px;
+    height: fit-content;
+    padding-bottom: 30px;
+    /* overflow-y: scroll; */
+}
+
+
+/* Top buttons */
+
+
+.tableFns {
+    padding: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 45px;
+}
+
+.tableFnsBtns {
+    border-radius: 10px;
+    padding: 11px 20px;
+    outline: none;
+    font: normal normal normal 20px/24px 'Ubuntu';
+}
+
+.tableFnsBtns:focus, .tableFnsBtns:active {
+    border: 1px solid #14AFF1;
+}
+
+
+.addBtn, .editBtn, .deleteBtn {
+    border: 1px solid #97A1A9;
+    background-color: transparent;
+    color: #97A1A9;
+    margin-right: 20px;
+}
+
+.addBtn img, .editBtn img, .deleteBtn img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.searchInput {
+    background: #283A46 0% 0% no-repeat padding-box;
+    border: 1px solid #356680;
+    color: #97A1A9;
+}
+
+
+
+/* Table */
+
+
+.tableDiv{
+    /* display: block; */
+    text-align: left;
+    padding: 30px;
+    padding-top: 0;
+    /* height: 55vh; */
+    height: fit-content;
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    height: fit-content;
+
+}
+
+.tableDiv thead {
+    width: 100%;
+    border-bottom: 1px solid #283A46;
+}
+
+.tableDiv tbody {
+    /* height: 55vh; */
+  /*  height: fit-content;*/
+    max-height:514px;
+}
+
+.tableDiv th, .tableDiv td {
+    font: normal normal normal 18px/21px 'Ubuntu';
+    color: #97A1A9;
+    text-align: center;
+    padding: 12px 20px;
+}
+
+.tableDiv td {
+    color: white;
+}
+
+.tableDiv tbody tr:nth-child(even){
+    background-color: #283A46;
+}
+
+
+
+/* Pagination buttons */
+
+
+.paginationLeftBtn {
+    border: none;
+    outline: none;
+    /* border: 1px solid red; */
+    width: 55px;
+    height: 55px;
+
+    position: absolute;
+    top: calc(50% + 50px);
+    left: 36px; 
+
+    border-radius: 50%;
+
+    background: #14AFF1 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 6px #00000069;
+}
+
+
+.paginationRightBtn {
+    border: none;
+    outline: none;
+    /* border: 1px solid red; */
+    width: 55px;
+    height: 55px;
+
+    position: absolute;
+    top: calc(50% + 50px);
+    right: 36px;
+
+    border-radius: 50%;
+    background: #14AFF1 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 6px #00000069;
+}
+
+.btn-disabled {
+    cursor: crosshair;
+    pointer-events: none;
+    background: #39495E 0% 0% no-repeat padding-box;
+}
+
+.paginationLeftBtn img, .paginationRightBtn img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: #97A1A9;
+}
+
+.snackbar {
+    min-width: 250px;
+    background-color: #283A46;
+    color: #fff; 
+    text-align: center; 
+    border-radius: 10px; 
+    padding: 30px; 
+    position: fixed;
+    z-index: 1;
+    left: 30px;
+    bottom: 30px;
+    border-left: 5px solid #FF5E5E;
+
+    
+  }
+
+  .snackbar p {
+    float: right;
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+  }
+
+/* Media queries */
+
+@media (max-width: 1440px) {
+
+    .brand img, .logo img {
+        width: 200px;
+    }
+
+    .heading {
+        font: normal normal normal 20px/24px 'Ubuntu';
+    }
+
+    .tableFnsBtns {
+        padding: 11px 20px;
+        outline: none;
+        font: normal normal normal 12px/18px 'Ubuntu';
+    }
+
+    
+    .paginationLeftBtn, .paginationRightBtn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .paginationLeftBtn img , .paginationRightBtn img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .addBtn img, .editBtn img, .deleteBtn img {
+        width: 12px;
+    }
+
+    .tableDiv th, .tableDiv td {
+        font: normal normal normal 12px/18px 'Ubuntu';
+    }
+}
+
+@media (max-width: 1000px){
+    .tableDiv {
+       /* overflow-x: scroll;*/
+    }
+}
+
